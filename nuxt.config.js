@@ -40,11 +40,6 @@ export default {
         src: "/scripts/_vendor.js",
         type: "text/javascript",
       },
-      // {
-      //   src: "/scripts/index.js",
-      //   type: "text/javascript",
-      //   defer: true,
-      // },
     ],
   },
 
@@ -60,10 +55,6 @@ export default {
   plugins: [
     {
       src: "~/plugins/anime.js",
-      ssr: false,
-    },
-    {
-      src: "~/plugins/typer.js",
       ssr: false,
     },
     {
