@@ -1,0 +1,540 @@
+@font-face {
+  font-family: "Playfair Display";
+  src: url("~assets/fonts/PlayfairDisplay-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("~assets/fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+html {
+  font-size: 12px !important;
+  line-height: 1.8;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #5f5c68;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  // overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  z-index: 1;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  margin: 0;
+}
+body a,
+html a {
+  text-decoration: none;
+  outline: 0;
+  color: #679334;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h5 {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+  opacity: 0.5;
+}
+
+.section-headline.text-gold {
+  color: #a67c07;
+}
+
+.section-headline {
+  font: 400 35px/1.3 "Playfair Display", serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #5f5c68;
+  position: relative;
+  margin-top: 0;
+  display: block;
+  margin-bottom: 50px;
+}
+
+.text-green {
+  color: #679334;
+}
+.jarallax * {
+  color: #fff;
+}
+
+// Mobile
+.popup-homepage.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateZ(0);
+}
+
+.popup-homepage {
+  position: absolute;
+  top: calc(100vh - 230px);
+  right: 25px;
+  z-index: 1070;
+  max-width: 550px;
+  width: 100%;
+  height: 200px;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.75s ease;
+  transform: translate3d(0, 100px, 0);
+}
+
+.popup-homepage .block-content-wrap,
+.popup-homepage .columns,
+.popup-homepage .popup-container,
+.popup-homepage .wrap {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.popup-homepage .popup-container {
+  width: 100%;
+}
+
+.popup-homepage.open .block-content-wrap {
+  pointer-events: fill;
+  width: 100%;
+}
+
+.popup-homepage .block-content-wrap {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.popup-homepage .close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.popup-homepage .picture {
+  margin: 0;
+  flex: 0 0 40%;
+}
+
+.popup-homepage .picture .wrap {
+  padding: 10px;
+}
+
+.popup-homepage .picture img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.column {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.popup-homepage .entry .inner {
+  padding: 25px 20px 25px 10px;
+}
+
+.popup-homepage .entry .section-headline {
+  font-size: 14px;
+  line-height: 26px;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.popup-homepage .entry .title {
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.popup-homepage .entry .desc {
+  max-height: 40px;
+  overflow: hidden;
+  margin: 0 0 20px;
+}
+
+.popup-homepage .entry .button {
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 18px;
+  display: inline-block;
+}
+
+.popup-homepage .entry .button .icon {
+  border: 1px solid #679334;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  line-height: 1;
+  margin-right: 25px;
+  text-align: center;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.icon {
+  font-family: icon !important;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.popup-homepage .entry .section-headline:after,
+.popup-homepage .entry .section-headline:before {
+  height: 2px;
+  width: 10%;
+}
+
+.section-headline.text-gold.lines-middle:after,
+.section-headline.text-gold.lines-middle:before {
+  background-color: #a67c07;
+}
+
+.section-headline.lines-middle:after,
+.section-headline.lines-middle:before {
+  content: "";
+  display: inline-block;
+  height: 3px;
+  width: 90px;
+  background-color: #679334;
+  vertical-align: middle;
+}
+
+.section-headline.lines-middle:before {
+  margin-right: 25px;
+}
+
+.section-headline.lines-middle:after {
+  margin-left: 25px;
+}
+
+.icon-plus:before {
+  content: "\00d7";
+}
+
+.icon {
+  font-family: icon !important;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.popup-homepage .close .icon {
+  font-weight: 700;
+}
+
+.icon-angle-right:before {
+  content: ">";
+}
+
+.popup-homepage .entry .button:hover {
+  color: #a67c07;
+}
+
+.popup-homepage .entry .button:hover .icon {
+  border: 1px solid #a67c07;
+  margin-right: 15px;
+  background-color: #a67c07;
+  color: #fff;
+}
+
+.section {
+  padding: 150px 0 100px;
+}
+
+// Dinner and Relaxin Style
+.block-card-overlap .block-picture.wide {
+  width: 95%;
+}
+.block-card-overlap .block-picture {
+  flex: none;
+  width: 55%;
+}
+.block-card-overlap .block-entry {
+  position: absolute;
+  margin-top: 80px;
+  top: 0;
+  width: 54%;
+  flex: none;
+  z-index: 25;
+}
+.block-card-overlap .overlap-wrapper {
+  position: relative;
+  padding-bottom: 130px;
+}
+.block-card-overlap .type-1 .block-entry,
+.block-card-overlap .type-3 .block-entry {
+  right: 0;
+}
+.block-card-overlap .block-picture .picture {
+  position: relative;
+  margin: 0;
+  padding: 0 30px 0 20px;
+  height: 100%;
+}
+.rev_clip {
+  clip-path: inset(0 1000px 0 0);
+  -webkit-clip-path: inset(0 1000px 0 0);
+  height: 100%;
+  position: relative;
+  z-index: 5;
+  min-height: 250px;
+}
+.rev_clip img {
+  position: absolute;
+  max-width: 200%;
+  width: 100%;
+  min-width: 100%;
+  min-height: 250px;
+}
+.bg-white {
+  background-color: #fff;
+}
+.block-card-overlap .block-entry .inner {
+  padding: 50px 60px 70px;
+}
+.block-card-overlap .block-entry .title {
+  font: 400 35px/1 "Playfair Display", serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0;
+  position: relative;
+  display: block;
+  line-height: 56px;
+}
+.block-card-overlap .block-entry .title-line {
+  height: 1px;
+  background-color: #679334;
+  margin: 35px 0 40px;
+  position: relative;
+}
+.block-card-overlap .type-1 .block-entry .title-line,
+.block-card-overlap .type-3 .block-entry .title-line {
+  right: -125px;
+  transform-origin: right;
+  -webkit-transform-origin: right;
+}
+.block-card-overlap .block-entry p {
+  max-width: 300px;
+  margin: 0;
+  font-size: 12px;
+}
+
+/*# Mobile */
+
+@media screen and (max-width: 1024px) {
+  .popup-homepage {
+    max-width: 470px;
+  }
+  .section {
+    padding: 75px 0;
+  }
+
+  .block-card-overlap .overlap-wrapper {
+    padding-bottom: 100px;
+  }
+  .block-card-overlap .block-entry .inner {
+    padding: 35px 45px;
+  }
+  .block-card-overlap .block-entry .title {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  .block-card-overlap .block-entry p {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .popup-homepage {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(65, 70, 94, 0.79);
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    transform: translateZ(0);
+    transition: all 0.4s ease;
+  }
+
+  .popup-homepage .popup-container {
+    padding: 100px;
+  }
+
+  .popup-homepage.open .block-content-wrap {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+  .popup-homepage .block-content-wrap {
+    display: flex;
+    -webkit-box-flex-direction: column;
+    -moz-box-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    transition: all 1s cubic-bezier(0.86, 0, 0.07, 1) 0.4s;
+    transform: translate3d(0, 100px, 0);
+    opacity: 0;
+  }
+  .popup-homepage .block-content-wrap,
+  .popup-homepage .columns,
+  .popup-homepage .popup-container,
+  .popup-homepage .wrap {
+    height: auto;
+  }
+
+  .popup-homepage .close {
+    color: #fff;
+    font-size: 30px;
+    right: 7px;
+    top: 7px;
+  }
+
+  .popup-homepage .picture {
+    flex: 1;
+  }
+
+  .popup-homepage .picture .wrap {
+    padding: 0;
+  }
+
+  .popup-homepage .entry {
+    background-color: #fff;
+  }
+  .popup-homepage .entry .inner {
+    padding: 30px 40px;
+  }
+  .block-card-overlap .overlap-wrapper {
+    padding-bottom: 0;
+  }
+  .block-card-overlap .block-picture {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .block-card-overlap .block-entry {
+    width: 70%;
+    right: 10%;
+    margin-top: 150px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  body,
+  html {
+    font-size: 12px !important;
+    line-height: 20px;
+  }
+  .popup-homepage .popup-container {
+    padding: 0;
+    width: 85%;
+  }
+
+  .picture {
+    overflow: hidden;
+  }
+  .popup-homepage .entry .inner {
+    padding: 20px 25px;
+  }
+  .section-headline {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 25px;
+  }
+  .popup-homepage .entry .desc {
+    max-height: 100%;
+  }
+  .section-headline.lines-middle:before {
+    margin-right: 15px;
+  }
+  .section-headline.lines-middle:after {
+    margin-left: 15px;
+  }
+  .section {
+    padding: 50px 0;
+  }
+  .bg-image-section-one:before {
+    height: 250px;
+    width: 150px;
+    top: -5vh;
+  }
+  .block-card-overlap .block-picture {
+    margin-bottom: 25px;
+  }
+  .block-card-overlap .block-picture .picture {
+    padding: 0 20px 0 0;
+  }
+  .block-card-overlap .block-entry {
+    width: calc(100% - 40px);
+    position: relative;
+    top: 0;
+    margin: auto;
+  }
+  .block-card-overlap .block-entry .inner {
+    padding: 30px;
+  }
+  .block-card-overlap .block-entry .title {
+    font-size: 28px;
+    line-height: 36px;
+    -webkit-box-flex-direction: column;
+    -moz-box-flex-direction: column;
+    flex-direction: column;
+  }
+}
