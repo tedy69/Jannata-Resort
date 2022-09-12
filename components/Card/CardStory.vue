@@ -100,11 +100,6 @@ export default {
 </script>
 
 <style>
-.container-inner {
-  padding-left: 12rem;
-  padding-right: 12rem;
-}
-
 .bg-vanilla {
   background-color: #f0f0f5;
 }

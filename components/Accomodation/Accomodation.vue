@@ -225,10 +225,6 @@ export default {
   background-repeat: no-repeat;
   opacity: 0.4;
 }
-.container-inner {
-  padding-left: 12rem;
-  padding-right: 12rem;
-}
 .bg-image-section-two:after {
   background-image: url("https://jannataresort.com/_nuxt/img/33d233c.png");
   bottom: -20%;

@@ -287,21 +287,8 @@ export default {
 }
 
 /* Mobile */
-@media screen and (max-width: 1024px) {
-  .container-inner {
-    padding-left: 8rem;
-    padding-right: 8rem;
-  }
-}
 
 @media screen and (max-width: 768px) {
-  .container-inner {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-  .q-container {
-    padding: 0 35px;
-  }
   .language-container {
     top: 20px;
     right: 10px;
@@ -314,13 +301,6 @@ export default {
   }
   #navContent {
     width: 100%;
-  }
-  .container-inner {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .q-container {
-    padding: 0 20px;
   }
 }
 </style>
