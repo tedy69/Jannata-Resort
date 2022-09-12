@@ -18,21 +18,24 @@
       data-scroll=""
       data-scroll-speed="-2"
       class="bg-image is-inview jarallax-img"
-      style="
-        background-image: url('https://vold-chain-hotel.s3-ap-southeast-1.amazonaws.com/5e65fe109dae8c14dd70f7e0/pictures/homepage/15843470372741/big/6fe77037-cba3-4b76-81d0-bac03e031898.jpg');
-      "
+      :style="{
+        backgroundImage: `url(${
+          data.model.featured.aws_file_url +
+          '/' +
+          data.model.featured.path +
+          '/' +
+          data.model.featured.filename.raw
+        })`,
+      }"
     ></div>
     <div class="q-container container-inner">
       <div class="columns overlap-wrapper type-1">
         <div class="column block-entry">
           <div class="inner">
-            <h2 class="title rev_item">RELAXING WITH JANNATA.</h2>
+            <h2 class="title rev_item">{{ data.model.title }}</h2>
             <div class="title-line"></div>
             <p class="rev_item">
-              A sanctuary for the senses, Champaka Spa features a comfortable
-              lounge area and three private treatment rooms for sessions of
-              personal rejuvenation. This charming wellness facility overlooks a
-              tropical valley that descends down to flowing river.
+              {{ data.model.description }}
             </p>
             <br />
             <div class="rev_item">
@@ -55,6 +58,44 @@ import ButtonMagnetic from "../Banner/ButtonMagnetic.vue";
 export default {
   methods: {},
   components: { ButtonMagnetic },
+  data() {
+    return {
+      data: {
+        name: "Component Five",
+        component_name: "ComponentFive",
+        model: {
+          title: "RELAXING WITH JANNATA.",
+          description:
+            "A sanctuary for the senses, Champaka Spa features a comfortable lounge area and three private treatment rooms for sessions of personal rejuvenation. This charming wellness facility overlooks a tropical valley that descends down to flowing river.",
+          featured: {
+            id: "5e6f379e9dae8c6e6bb078fc",
+            created_at: "2020-03-16 08:23:58",
+            updated_at: "2020-03-16 08:23:58",
+            updatedBy: null,
+            title: null,
+            description: null,
+            size: 79004,
+            type: "IMG",
+            original: "6fe77037-cba3-4b76-81d0-bac03e031898.jpg",
+            path: "5e65fe109dae8c14dd70f7e0/pictures/homepage/15843470372741",
+            is_aws: true,
+            aws_file_url:
+              "https://vold-chain-hotel.s3-ap-southeast-1.amazonaws.com",
+            filename: {
+              big: "big/6fe77037-cba3-4b76-81d0-bac03e031898.jpg",
+              raw: "raw/6fe77037-cba3-4b76-81d0-bac03e031898.jpg",
+              blur: "blur/6fe77037-cba3-4b76-81d0-bac03e031898.jpg",
+              medium: "medium/6fe77037-cba3-4b76-81d0-bac03e031898.jpg",
+            },
+          },
+          link: {
+            title: "Read More",
+            url: "champaka-spa",
+          },
+        },
+      },
+    };
+  },
 };
 </script>
 
