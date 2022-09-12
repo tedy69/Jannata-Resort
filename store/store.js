@@ -4,6 +4,7 @@ export const store = Vue.observable({
   isInitialPageLoad: true,
   splashScreenEnabled: true,
   pageTransitionEnabled: false,
+  isNavSmall: false,
 });
 
 export const mutations = {
@@ -15,5 +16,13 @@ export const mutations = {
   },
   enablePageTransition(yesno) {
     store.pageTransitionEnabled = yesno;
+  },
+  shrinkNav() {
+    console.debug("mutation.shrinkNav");
+    store.isNavSmall = true;
+  },
+  growNav() {
+    console.debug("mutation.growNav");
+    store.isNavSmall = false;
   },
 };

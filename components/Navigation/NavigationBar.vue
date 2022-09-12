@@ -182,17 +182,6 @@ export default {
       }
     },
   },
-  mounted() {
-    this.$axios
-      .get("/homepage.json")
-      .then((response) => {
-        this.data = response.data;
-        console.log(this.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  },
   methods: {
     hoveredMenuList(item) {
       this.data = item;

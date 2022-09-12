@@ -3,14 +3,14 @@
     <div
       class="accommodation-type column-item"
       v-for="item in data.model.dataSlider"
-      :key="item.id + item.featured.filename.raw + ' accommodations'"
+      :key="item.id + item.featured.filename.big + ' accommodations'"
       @mouseover="
         onHover(
           item.featured_hover.aws_file_url +
             '/' +
             item.featured_hover.path +
             '/' +
-            item.featured_hover.filename.raw
+            item.featured_hover.filename.big
         )
       "
       @mouseleave="hover = false"
@@ -26,7 +26,7 @@
               '/' +
               item.featured.path +
               '/' +
-              item.featured.filename.raw
+              item.featured.filename.big
             })`,
           }"
         >

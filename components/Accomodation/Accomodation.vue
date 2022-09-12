@@ -241,7 +241,7 @@ export default {
 #home_accommodation .accommodations .accommodation-type {
   width: 33.33333%;
   float: left;
-  height: 450px;
+  height: 500px;
   position: relative;
 }
 #home_accommodation .accommodations .accommodation-type a {

@@ -76,7 +76,6 @@
     </div>
     <div
       id="mainContent"
-      class="q_smooth loco-scroll"
       data-scroll-section-inview
       style="
         transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);

@@ -54,10 +54,6 @@ export default {
       src: "~/plugins/anime.js",
       ssr: false,
     },
-    {
-      src: "~/plugins/locomotiveScroll.js",
-      ssr: false,
-    },
     { src: "~/plugins/jarallax.js", ssr: false },
     { src: "~~/node_modules/vue-rellax/lib/nuxt-plugin", ssr: false },
   ],
