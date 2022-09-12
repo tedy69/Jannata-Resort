@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "jannata-resort",
+    title: "Jannata Resort",
     htmlAttrs: {
       lang: "en",
       class: "has-scroll-init has-scroll-smooth has-scroll-scrolling",
@@ -32,9 +32,6 @@ export default {
       },
       {
         src: "https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js",
-      },
-      {
-        src: "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js",
       },
       {
         src: "/scripts/_vendor.js",
